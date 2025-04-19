@@ -1,8 +1,38 @@
 # auo-dues-compiler
-takes in dues spreadsheet and cashnet record and complies dues record
+### Takes in dues spreadsheet and cashnet record and complies dues record
 
-### "Dues Tracker" is the first 3 columns of Dues Tracker google sheet copied and pasted into a .txt
-### "Cashnet Record" is a pdf obtained from SLICE and all text copied into a .txt. 
-OPEN PDF IN chrome or firefox browser and highlight all using command/control+A. 
-Do not copy from mac preview pdf viewer.
+## What is this
+Some people don't send receipt number when they pay on cashnet. 
+But SLICE cashnet record at least records the names of people who paid.
+This program shows you every person who has a cashnet record but no
+recorded receipt number.
+
+## Additional features
+- Immediately see who hasn't paid dues yet
+- See if someone paid their dues multiple times
+- Automatically ignore cashnet data from non-current semester
+
+## Obtaining "Dues Tracker"
+1. Copy the 3 columns of the Dues Tracker google sheet and paste it into a .txt (DO NOT format as CSV)
+2. Call this duestracker-f23.txt or whatever the semester is
+
+## Obtaining "Cashnet Record"
+1. Email Student Involvement and Traditions Finance requesting a cashnet record for AUO in PDF format (NOT excel/csv format)
+2. Open PDF in chrome or firefox browser and highlight all using command/control+A (DO NOT copy from mac preview pdf viewer)
+3. Copy and paste into a .txt - make sure you can see one transaction per line each starting with the date
+4. Call this cashnet-f23.txt or whatever the semester is
+
+## Quick start
+1. Install Python 3.10 or newer
+2. Clone this repository to your device
+3. Move/copy your duestracker-xxx.txt and cashnet-xxx.txt to the home directory of your local repository
+4. Open main.py
+5. Type the file name of your dues tracker and cashnet record when prompted
+6. See merged data in the console output
+
+## Troubleshooting
+After parsing Cashnet Record - if extra words are appended to people's names, 
+or dues appearing in non dues payments, add those words to Tokens.tokens in main.py.
+
+Email wellsjason543@gmail.com for issues or questions
 

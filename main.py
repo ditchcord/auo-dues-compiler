@@ -1,5 +1,5 @@
 #
-# Jason H. Wells - wellsjason543@gmail.com
+# Jason H. Wells - wellsjason543@gmail.com - jwellsuhhuh (Discord)
 # v4 - 03/30/2025
 # 
 # "Dues Tracker" is the first 3 columns of Dues Tracker google sheet copied and pasted into a .txt
