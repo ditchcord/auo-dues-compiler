@@ -1,4 +1,5 @@
 # auo-dues-compiler
+
 ### Takes in dues spreadsheet and cashnet record and complies dues record
 
 ## What is this
@@ -34,5 +35,5 @@ recorded receipt number.
 After parsing Cashnet Record - if extra words are appended to people's names, 
 or dues appearing in non dues payments, add those words to Tokens.tokens in main.py.
 
-Email wellsjason543@gmail.com for issues or questions
+Email wellsjason543 at gmail dot com for issues or questions
 
