@@ -1,6 +1,5 @@
-Flute	Dues Paid?	Cashnet Receipt Number (bold if tartanconnect confirmed)
 Henry Zhao	TRUE	595677
-Jill Kao	FALSE	
+Jill Kao	TRUE	598034
 Emily Wang	TRUE	581081
 Liz Chu	TRUE	589302
 Megan McDonnell	TRUE	581081
@@ -10,24 +9,24 @@ Levana Lai	TRUE	582939
 		
 Oboe		
 Samuel Triest	TRUE	
-Jason H Wells	TRUE	582940
-John Kim	TRUE	lucy
+Jason H. Wells	TRUE	582940
+John Kim	TRUE	598594
 		
 Clarinet		
 Angela Shen	TRUE	597569
 Ye Wei	TRUE	
-Tiffany Chang	FALSE	
+Tiffany Chang	TRUE	598342
 Peter Winstel	TRUE	
-Andrew Li	FALSE	
+Andrew Li	TRUE	598888
 Siyi Tang	TRUE	
 Iris Reed	TRUE	
 		
 Bassoon		
 Aryn Gittis	TRUE	
-John Newsom	FALSE	
+John Newsom	TRUE	
 		
 Horn		
-Ysanni Core	TRUE	lucy
+Ysanni Core	TRUE	598594
 Xavier Rodriguez	FALSE	
 Keming Meng	FALSE	
 Joshua Baek	FALSE	
@@ -36,24 +35,25 @@ Bridget McCoy	TRUE
 Kevin You	TRUE	597948
 Karishma Kulshrestha	FALSE	
 		
+		
 Trumpet		
-Bo Ahn	FALSE	
+Bo Ahn	TRUE	
 Mikayla Terrana	TRUE	580789
 		
 Trombone		
 Andrew Jiang		
 		
 Percussion		
-Chloe Pratt	FALSE	
+Chloe Pratt	TRUE	601059
 Sam Finkel	TRUE	582931
-Ishaan Masilamony	TRUE	lucy
-Michael Liu	TRUE	lucy
+Ishaan Masilamony	TRUE	598594
+Michael Liu	TRUE	598594
 		
 Violin 1		
 Dene Hoffman	TRUE	
 Michael Meng	TRUE	
 Charisse Qin		
-Emily Sohn	FALSE	
+Emily Sohn	TRUE	598236
 Truanne Chen	FALSE	
 Liam Doherty	TRUE	595595
 Allen Yang	TRUE	581081
@@ -64,16 +64,16 @@ Amber Li	TRUE
 Edward Li	TRUE	
 Yuna Shin	TRUE	582965
 Alexander Harry Burton 	FALSE	
-Sierra Green	TRUE	lucy
+Sierra Green	TRUE	598594
 David Zhang	FALSE	
 Ethan Tran	FALSE	
 Ejoo Kang	TRUE	venmo (wrong lucy wang)
-Lucy Mo	TRUE	unknown 581087 581079
+Lucy Mo	TRUE	581087
 Sanjana Shriram	TRUE	581081
 Tianyun Zhang	TRUE	596714
 Randy Zhang	TRUE	
 Bridget Qiu	FALSE	
-Julia Song	TRUE	venmo
+Julia Song	TRUE	597127
 Samuel Yang	TRUE	
 Jana Reiser	TRUE	595621
 Baili Jiang	TRUE	594798
@@ -93,23 +93,23 @@ Michelle Bryson	TRUE	583448
 Lynnette Ng	TRUE	
 Jenny Quan	TRUE	589322
 Laura Lee	TRUE	581081
-Sarah Chung	FALSE	
+Sarah Chung	TRUE	unknown
 Veer Banwait	TRUE	593492
 Evan Lan	TRUE	585931
 Venkatesh Sivaraman	TRUE	597992
-Vishakha Joshi	FALSE	
-Kristen Lamberton	FALSE	
+Vishakha Joshi	TRUE	599225
+Kristen Lamberton	TRUE	
 Debbie Conejo	TRUE	
 Taiga Nishida	TRUE	582559
 Daniela Bellido		
-Sophia Zhu	FALSE	
+Sophia Zhu	TRUE	600794
 LiLi DiMuzio	TRUE	
 Lilly Liebel	FALSE	
 Jessica Wen		
 Yu-An Tsai	TRUE	583448
 Joyce Wang	FALSE	
 Katherine Sabak	TRUE	581732
-Luis Rivera Lopez		
+Luis Rivera Lopez	TRUE	598242
 Claire Meachen		
 Kshan Pandey		
 Hee So Kim	TRUE	586209
@@ -118,16 +118,16 @@ Leanna Adunts
 		
 Viola		
 Ariana Watson	FALSE	
-Julien Derroitte	FALSE	
-Anna Gu	TRUE	lucy
-Teddy Chen	FALSE	
+Julien Derroitte	TRUE	581079
+Anna Gu	TRUE	599225
+Teddy Chen	TRUE	582357
 Elizabeth Hsu	TRUE	587175
-Helen Zheng	TRUE	lucy
+Helen Zheng	TRUE	598594
 Zichu Wang	TRUE	583448
 Isabella D'Amico	TRUE	581081
 Jason Xia	TRUE	589302
-Jerick Shi	FALSE	
-Madison Staugaitis	TRUE	lucy
+Jerick Shi	TRUE	601059
+Madison Staugaitis	TRUE	598594
 Mia Manton	TRUE	
 Ilia Urgen	FALSE	
 Jinhee Kim	TRUE	583919
@@ -142,12 +142,12 @@ Katie Robinson	TRUE
 Grace Ahn	FALSE	
 Tehya Lim	TRUE	581081
 Kevin Dai	TRUE	
-Alex Yoon	FALSE	
+Alex Yoon	TRUE	596055
 Dustin Miao	TRUE	589302
 Jacob Milgrub	TRUE	585915
 Arielle Turullols	FALSE	
 Connor Moroney	TRUE	585937
-Norah Czajka	FALSE	
+Norah Czajka	TRUE	598260
 Maggie Stech	FALSE	
 Caroline Kiesnowski	FALSE	
 Adam Gockley	TRUE	598045

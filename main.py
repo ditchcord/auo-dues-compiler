@@ -19,7 +19,7 @@ class Tokens:
 
 class Person:
     def __init__(self, name: str, 
-                       paymentMethod: str, # 'cashnet', 'cashnet(record only)', 'cashnet(duplicate)', 'cash', 'none'
+                       paymentMethod: str, # 'cashnet', 'cashnet(record only)', 'cashnet(duplicate)', 'cash', 'NONE'
                        cashnetReceiptNumber: str,
                        cashnetConfirmation: tuple[str, str] | None): # (date, amount)
         
@@ -65,16 +65,12 @@ def getCashnetRecordLines():
 # mutates people, returns None
 def processDuesTracker(people: list[Person], duesTrackerLines: list[str]):
     doubleContinue = False
-    for line in duesTrackerLines[1:]: # skip first line
-        if doubleContinue:
-            doubleContinue = False
-            continue
-        if line[0] in string.whitespace: # skip 2 lines
-            doubleContinue = True
+    for line in duesTrackerLines:
+        # no checkbox means un-useful line or person dropped
+        if 'FALSE' not in line and 'TRUE' not in line: 
             continue
         
         boolStartIndex = max(line.find('TRUE'), line.find('FALSE'))
-        if boolStartIndex == -1: continue # no TRUE or FALSE checkbox meaning that person dropped
         
         # name
         name = line[:boolStartIndex-1]
@@ -109,11 +105,23 @@ def processCashnetRecord(people: list[Person], cashnetRecordLines: list[str]):
     newPeople = copy.copy(people)
 
     dataLines = []
+    highestYear = 0
     for line in cashnetRecordLines:
-        try: line[2]
+        try: LineHasTransaction = line[2] == '/' # look for date stamp
         except IndexError: continue
-        if line[2] == '/': # look for date stamp
+        
+        if LineHasTransaction:
+            year = int(line.split('/')[2][:4])
+            if highestYear < year: highestYear = year
             dataLines.append(line)
+    
+    # remove transactions not from the highest year (don't include fall semester transactions during spring semester)
+    lineNumber = len(dataLines)-1
+    while 0 <= lineNumber:
+        if int(dataLines[lineNumber].split('/')[2][:4]) != highestYear:
+            del dataLines[lineNumber]
+        lineNumber -= 1
+
 
     nonDuesPayments: list = []
 
@@ -130,8 +138,8 @@ def processCashnetRecord(people: list[Person], cashnetRecordLines: list[str]):
         date = line[:11]
 
         # amount
-        amountStartIndex = max(line.find('.com'), line.find('.edu'))+5
-        amount = line[amountStartIndex:-1]
+        amountStartIndex = max(line.find('.com'), line.find('edu'))+4
+        amount = line[amountStartIndex:].strip()
     
         index = -1
         found = False
@@ -164,36 +172,40 @@ def printPeople(people: list[Person]):
     insertIndexesTo2dList(peopleList)
     prettyPrint(peopleList)
 
-def printUnpaidPeople(people: list[Person]):
-    peopleList = [person.personToList() for person in people if person.paymentMethod == 'NONE']
+def printPeopleWithPaymentMethod(people: list[Person], paymentMethod: str):
+    peopleList = [person.personToList() for person in people if person.paymentMethod == paymentMethod]
     peopleList.sort()
     peopleList.insert(0,['Name','Payment Method','Cashnet Receipt No.','Cashnet Confirmation'])
     
     insertIndexesTo2dList(peopleList)
+
+    print(f'---Payment Method: {paymentMethod}---')
     prettyPrint(peopleList)
 
 def main():
     people: list[Person] = []
-    
-    print() # empty line
+    print()
 
+    # dues tracker
     duesTrackerLines = getDuesTrackerLines()
     processDuesTracker(people, duesTrackerLines)
     
     print('---dues tracker data---')
     printPeople(people)
     
-    print('---unpaid only---')
-    printUnpaidPeople(people)
+    printPeopleWithPaymentMethod(people, 'NONE')
 
+    # cashnet record
     cashnetRecordLines = getCashnetRecordLines()
     people, nonDuesPayments = processCashnetRecord(people, cashnetRecordLines)
     
     print('---data merged w/ cashnet record ---')
     printPeople(people)
 
-    print('---unpaid only---')
-    printUnpaidPeople(people)
+    printPeopleWithPaymentMethod(people, 'cashnet(duplicate)')
+    printPeopleWithPaymentMethod(people, 'cashnet(record only)')
+    printPeopleWithPaymentMethod(people, 'NONE')
+    
 
     print('---non dues payments---')
     for item in nonDuesPayments:
