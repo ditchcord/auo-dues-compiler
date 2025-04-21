@@ -1,6 +1,6 @@
 #
 # Jason H. Wells - wellsjason543 at gmail dot com - jwellsuhhuh (Discord)
-# updated 03/30/2025
+# updated 2025/03/30
 # 
 # "Dues Tracker" is the first 3 columns of Dues Tracker google sheet copied and pasted into a .txt
 # "Cashnet Record" is a pdf obtained from SLICE and all text copied into a .txt
