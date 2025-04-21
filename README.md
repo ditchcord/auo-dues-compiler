@@ -25,7 +25,7 @@
 ## Quick start
 1. Install Python 3.10 or newer
 2. Clone this repository to your device
-3. Move/copy your duestracker-xxx.txt and cashnet-xxx.txt to the home directory of your local repository
+3. Move/copy your duestracker-xxx.txt and cashnet-xxx.txt to the **private** folder (so that git pushes won't expose ppl's data)
 4. Open main.py
 5. Type the file name of your dues tracker and cashnet record when prompted
 6. See merged data in the console output
