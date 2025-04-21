@@ -3,15 +3,14 @@
 ### Takes in dues spreadsheet and cashnet record and complies dues record
 
 ## What is this
-Some people don't send receipt number when they pay on cashnet. 
-But SLICE cashnet record at least records the names of people who paid.
-This program shows you every person who has a cashnet record but no
-recorded receipt number.
+- Some people don't send receipt number when they pay on cashnet
+- But SLICE cashnet record at least records the names of people who paid
+- This program shows you every person who has a cashnet record but no recorded receipt number.
 
 ## Additional features
 - Immediately see who hasn't paid dues yet
 - See if someone paid their dues multiple times
-- Automatically ignore cashnet data from non-current semester
+- If transactions from spring semester exist, automatically ignore cashnet data from fall semester
 
 ## Obtaining "Dues Tracker"
 1. Copy the 3 columns of the Dues Tracker google sheet and paste it into a .txt (DO NOT format as CSV)

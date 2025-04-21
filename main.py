@@ -1,6 +1,6 @@
 #
-# Jason H. Wells - wellsjason543@gmail.com - jwellsuhhuh (Discord)
-# v4 - 03/30/2025
+# Jason H. Wells - wellsjason543 at gmail dot com - jwellsuhhuh (Discord)
+# updated 03/30/2025
 # 
 # "Dues Tracker" is the first 3 columns of Dues Tracker google sheet copied and pasted into a .txt
 # "Cashnet Record" is a pdf obtained from SLICE and all text copied into a .txt
@@ -9,7 +9,6 @@
 # add those words to Tokens.tokens
 #
 
-import string
 import copy
 from os.path import isfile
 from cmu_cpcs_utils import prettyPrint
